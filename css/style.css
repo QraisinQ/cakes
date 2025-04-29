@@ -1,0 +1,18 @@
+.carousel-item {
+  min-height: 652px;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(245, 245, 245);
+}
+
+.slide-1 {
+  background-image: url("../images/cakes/slide-1.jpeg");
+}
+.slide-2 {
+  background-image: url("../images/cakes/slide-2.jpg");
+}
+.slide-3 {
+  background-image: url("../images/cakes/slide-3.jpeg");
+}
