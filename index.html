@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+    <!-- Header -->
     <header class="header bg-dark sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-sm navbar-dark  ">
@@ -24,8 +26,8 @@
                         <ul style="margin: auto; font-size: large;" class=" navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="#">Home</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
                             <li class="nav-item"><a class="nav-link " href="#">Log in</a></li>
                         </ul>
                     </div>
@@ -33,8 +35,9 @@
             </nav>
         </div>
     </header>
+
+    <!-- Carousel -->
     <section class="carousel">
-        <!-- Carousel -->
         <div class="carousel-wrapper">
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <!-- Indicators/dots -->
@@ -46,22 +49,19 @@
                 <!-- The slideshow/carousel -->
                 <div class="carousel-inner">
                     <div class="carousel-item slide-1  active">
-                        <!-- <img src="./images/cakes/resized/slide-1.jpeg" alt="Napoleon" class="d-block w-100"> -->
-                        <div class="carousel-caption">
+                        <div class="carousel-caption d-none d-md-block">
                             <h3>Napoleon</h3>
                             <p>Napoleon is a classic French dessert </p>
                         </div>
                     </div>
                     <div class="carousel-item slide-2">
-                        <!-- <img src="./images/cakes/resized/slide-2.jpg" alt="Tiramisu" class="d-block w-100"> -->
-                        <div class="carousel-caption">
+                        <div class="carousel-caption d-none d-md-block">
                             <h3>Tiramisu</h3>
                             <p>Tiramisu - the luxurious taste for dessert lovers</p>
                         </div>
                     </div>
                     <div class="carousel-item slide-3 ">
-                        <!-- <img src="./images/cakes/resized/slide-3.jpeg" alt="Banana Cake" class="d-block w-100"> -->
-                        <div class="carousel-caption">
+                        <div class="carousel-caption d-none d-md-block">
                             <h3>Banana cake</h3>
                             <p>Banana cake - perfect for any celebration</p>
                         </div>
@@ -78,46 +78,73 @@
         </div>
     </section>
 
-    <section class="products">
+    <!-- About -->
+    <section id="about">
         <div class="container">
-            <div class="products-wrapper">
+            <div class="about-wrapper">
+                <div class="about-content row justify-content-center">
+                    <h1 class="h1 text-center"> Freshly baked for every occasion</h1>
+                    <p class="lead col-sm-12 col-md-6 col-xl-6">At CAKES in Galway, we specialize in crafting
+                        mouthwatering cakes
+                        that elevate every
+                        celebration.
+                        Whether you're marking a birthday, wedding, or any special event, our diverse range of flavors
+                        and
+                        designs ensures there's something for everyone. We take pride in our custom cake options,
+                        allowing
+                        you to create the perfect centerpiece for your occasion. Experience the joy of freshly made
+                        cakes
+                        that taste as good as they look, right here in Galway!
+                    </p>
+                    <img src="images/cakes/about-bg.jpeg" class="about-image col-sm-12 col-md-6 col-xl-6" alt="cakes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class=" products">
+        <div class="container">
+            <h1 class="h1 text-center">Custom creation for every celebration</h1>
+            <div class=" products-wrapper">
                 <div class="row ">
                     <div class="card-wrapper col-md-6 col-lg-4">
                         <div class="card m-1">
-                            <img class="card-img-top pt-2" src="./images/cakes/Classic Vanila Cake.jpeg"
+                            <img class="card-img-top pt-2" src="../images/cakes/Classic_Vanila_Cake.jpeg"
                                 alt="Classic Vanila Cake" style="width:100%">
                             <div class="card-body">
                                 <h4 class="card-title">John Doe</h4>
                                 <p class="card-text">Some example text some example text. John Doe is an architect and
                                     engineer
                                 </p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn  bg-danger-subtle border-danger-subtle rounded-2">See Profile</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-wrapper col-md-6 col-lg-4">
                         <div class="card m-1">
-                            <img class="card-img-top pt-2" src="./images/cakes/Delicious Cake For Every Occasion.jpeg"
+                            <img class="card-img-top pt-2" src="../images/cakes/Delicious_Cake_For_Every_Occasion.jpeg"
                                 alt="Delicious Cake For Every Occasion" style="width:100%">
                             <div class="card-body">
                                 <h4 class="card-title">John Doe</h4>
                                 <p class="card-text">Some example text some example text. John Doe is an architect and
                                     engineer
                                 </p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn  bg-danger-subtle border-danger-subtle rounded-2">See
+                                    Profile</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-wrapper col-md-6 col-lg-4">
                         <div class="card m-1">
-                            <img class="card-img-top pt-2" src="./images/cakes/Elegant Red Velvet Cake.jpeg"
+                            <img class="card-img-top pt-2" src="../images/cakes/Elegant_Red_Velvet_Cake.jpeg"
                                 alt="Elegant Red Velvet Cake" style="width:100%">
                             <div class="card-body">
                                 <h4 class="card-title">John Doe</h4>
                                 <p class="card-text">Some example text some example text. John Doe is an architect and
                                     engineer
                                 </p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn bg-danger-subtle border-danger-subtle rounded-2">See Profile</a>
                             </div>
                         </div>
                     </div>
@@ -125,40 +152,40 @@
 
                     <div class="card-wrapper col-md-6 col-lg-4">
                         <div class="card m-1">
-                            <img class="card-img-top pt-2" src="./images/cakes/Banana Cake.jpeg" alt="Banana Cake"
+                            <img class="card-img-top pt-2" src="../images/cakes/Banana_Cake.jpeg" alt="Banana Cake"
                                 style="width:100%">
                             <div class="card-body">
                                 <h4 class="card-title">John Doe</h4>
                                 <p class="card-text">Some example text some example text. John Doe is an architect and
                                     engineer
                                 </p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn bg-danger-subtle border-danger-subtle rounded-2">See Profile</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-wrapper col-md-6 col-lg-4">
                         <div class="card m-1">
-                            <img class="card-img-top pt-2" src="./images/cakes/Napoleon.jpeg" alt="Napoleon"
+                            <img class="card-img-top pt-2" src="../images/cakes/Napoleon.jpeg" alt="Napoleon"
                                 style="width:100%">
                             <div class="card-body">
                                 <h4 class="card-title">John Doe</h4>
                                 <p class="card-text">Some example text some example text. John Doe is an architect and
                                     engineer
                                 </p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn bg-danger-subtle border-danger-subtle rounded-2">See Profile</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-wrapper col-md-6 col-lg-4">
                         <div class="card m-1">
-                            <img class="card-img-top pt-2" src="./images/cakes/Tiramisu.jpeg" alt="Tiramisu"
+                            <img class="card-img-top pt-2" src="../images/cakes/Tiramisu.jpeg" alt="Tiramisu"
                                 style="width:100%">
                             <div class="card-body">
                                 <h4 class="card-title">John Doe</h4>
                                 <p class="card-text">Some example text some example text. John Doe is an architect and
                                     engineer
                                 </p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn bg-danger-subtle border-danger-subtle rounded-2">See Profile</a>
                             </div>
                         </div>
                     </div>
@@ -168,7 +195,7 @@
         </div>
         </div>
     </section>
-
+    <!-- Footer -->
     <section class="footer">
         <div class="mt-5 p-4 bg-dark text-white text-center flex-row justify-content-center">
             <span class="d-flex justify-content-center align-text-bottom">Contacts:</span>
