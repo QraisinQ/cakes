@@ -1,60 +1,51 @@
 body {
-  background-color: rgb(239, 230, 230);
-}
-.carousel-item {
-  min-height: 652px;
-  height: 90vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgb(239, 230, 230);
-  margin-bottom: 55px;
+	background-color: rgb(239, 230, 230);
 }
 
-/* .about-item {
-  margin: 5px;
-  min-height: 352px;
-  height: 20vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgb(239, 230, 230);
-  background-image: url("/images/cakes/about-bg.jpeg");
-  opacity: 20%;
-  margin-bottom: 55px;
-} */
+.carousel-item {
+	min-height: 652px;
+	height: 90vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: rgb(239, 230, 230);
+}
 
 .slide-1 {
-  background-image: url("../images/cakes/resized/slide-1.jpeg");
+	background-image: url('../images/cakes/resized/slide-1.jpeg');
 }
 .slide-2 {
-  background-image: url("../images/cakes/resized/slide-2.jpg");
+	background-image: url('../images/cakes/resized/slide-2.jpg');
 }
 .slide-3 {
-  background-image: url("../images/cakes/resized/slide-3.jpeg");
+	background-image: url('../images/cakes/resized/slide-3.jpeg');
 }
+
 .telegram {
-  max-width: 50px;
+	max-width: 50px;
 }
 .linkedIn {
-  max-width: 48px;
+	max-width: 48px;
 }
+
 .card {
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: transform 0.3s ease;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: transform 0.3s ease;
 }
 .card:hover {
-  transform: scale(1.02);
-  z-index: 1;
+	transform: scale(1.02);
+	z-index: 1;
 }
 .h1 {
-  margin-bottom: 55px;
+	margin-bottom: 55px;
 }
-.container {
-  margin-bottom: 55px;
+
+.about-image img {
+	width: 100%;
 }
 
 .about-image {
-  border: 2px solid white;
+	border: 5px solid white;
+	border-radius: 5px;
 }
