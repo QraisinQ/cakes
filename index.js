@@ -1,5 +1,15 @@
 const express = require("express");
 const app = express();
+const bodyParcer = require("body-parcer");
+app.use(bodyParcer.urlencoded({ extended: true }));
+
+//Set view engine
+app.set("view engine", "ejs");
+
+//import authentication module
+const auth = require("./auth.js");
+
+auth.createUser("hs1985irin@gmail.com", "12345");
 
 //Connect ot database:
 const mysql = require("mysql");
@@ -22,6 +32,23 @@ connection.connect((err) => {
 
 //Server static files from the public ddirectory
 app.use(express.static("home"));
+
+//route to handle the login form submission
+app.post("/login", function (req, res) {
+  const username = req.body.username;
+  const password = req.body.password;
+  // const { username, password = req, body }; // the same as previous 2 lines
+  const authenticated = auth.authenticateUser(username, password);
+  console.log(authenticated);
+
+  if (authenticated) {
+    console.log("Authentiction was successbul!");
+    res.render("index");
+  } else {
+    console.log("Authentication was NOT successful!");
+    res.render("login");
+  }
+});
 
 app.get("/shop", function (req, res) {
   const ID = req.query.rec;
