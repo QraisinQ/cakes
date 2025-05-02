@@ -1,66 +1,64 @@
 body {
-  background-color: rgb(239, 230, 230);
+	background-color: rgb(239, 230, 230);
 }
 
 .carousel-item {
-  min-height: 652px;
-  height: 90vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgb(239, 230, 230);
+	min-height: 652px;
+	height: 90vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: rgb(239, 230, 230);
 }
 
 .slide-1 {
-  background-image: url("../images/cakes/resized/slide-1.jpeg");
+	background-image: url('../images/cakes/resized/slide-1.jpeg');
 }
 .slide-2 {
-  background-image: url("../images/cakes/resized/slide-2.jpg");
+	background-image: url('../images/cakes/resized/slide-2.jpg');
 }
 .slide-3 {
-  background-image: url("../images/cakes/resized/slide-3.jpeg");
+	background-image: url('../images/cakes/resized/slide-3.jpeg');
 }
 
 .telegram {
-  max-width: 50px;
+	max-width: 50px;
 }
 .linkedIn {
-  max-width: 48px;
+	max-width: 48px;
 }
 
 .card {
-  padding-left: 5px;
-  padding-right: 5px;
-  transition: transform 0.3s ease;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: transform 0.3s ease;
 }
 .card:hover {
-  transform: scale(1.02);
-  z-index: 1;
+	transform: scale(1.02);
+	z-index: 1;
 }
 .h1 {
-  margin-bottom: 55px;
+	margin-bottom: 55px;
 }
 
 .about-image img {
-  width: 100%;
+	width: 100%;
 }
 
 .about-image {
-  border: 5px solid white;
-  border-radius: 5px;
+	border: 5px solid white;
+	border-radius: 5px;
 }
 .contacts-wrapper {
-  max-width: 900px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  width: 75vh;
+	background-color: #ffffff;
+	border-radius: 5px;
 }
 .custom-hover:hover {
-  background-color: #e89ca2 !important; /* Slightly darker than bg-danger-subtle */
-  border-color: #e6848c !important; /* Slightly deeper border */
-  color: #000 !important;
+	background-color: #e89ca2 !important; /* Slightly darker than bg-danger-subtle */
+	border-color: #e6848c !important; /* Slightly deeper border */
+	color: #000 !important;
 }
 
 .sighin-form-wrapper {
-  margin-top: -80px;
+	margin-top: -80px;
 }
