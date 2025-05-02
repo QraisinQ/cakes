@@ -49,6 +49,8 @@ body {
 	border: 5px solid white;
 	border-radius: 5px;
 }
+
+/* contacts */
 .contacts-wrapper {
 	background-color: #ffffff;
 	border-radius: 5px;
@@ -57,8 +59,4 @@ body {
 	background-color: #e89ca2 !important; /* Slightly darker than bg-danger-subtle */
 	border-color: #e6848c !important; /* Slightly deeper border */
 	color: #000 !important;
-}
-
-.sighin-form-wrapper {
-	margin-top: -80px;
 }
