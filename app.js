@@ -18,7 +18,7 @@ const connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: 'root',
-	database: 'G00473379',
+	database: 'test',
 });
 
 //Connect to the database
@@ -31,7 +31,7 @@ connection.connect((err) => {
 });
 
 //Server static files from the public ddirectory
-app.use(express.static('home'));
+app.use(express.static('public'));
 
 //route to handle the login form submission
 app.post('/login', function (req, res) {
