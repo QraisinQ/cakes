@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const { myDatabase } = require('./database/database');
 
 const PORT = 3000;
 
@@ -17,7 +18,10 @@ app.set('view engine', 'ejs');
 // 	}
 
 app.get('/shop', function (req, res) {
-	const ID = req.query.rec;
+	myDatabase.getAllCakes().then(([rows, fields]) => {
+		res.send(rows);
+	});
+	// console.log(myDatabase.getAllCakes());
 });
 
 //Server static files from the public ddirectory
