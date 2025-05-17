@@ -1,6 +1,9 @@
 body {
   background-color: rgb(239, 230, 230);
 }
+.h1 {
+  color: #808284;
+}
 
 .carousel-item {
   min-height: 652px;
@@ -71,4 +74,13 @@ body {
 }
 .footer .p-4 {
   padding: 1.55rem !important;
+}
+.basket_footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.copywrite {
+  color: #808284;
 }
