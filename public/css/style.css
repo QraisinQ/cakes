@@ -34,7 +34,7 @@ body {
   max-width: 30px;
   /* background-color: #fff; */
 }
-
+/* cards */
 .card {
   padding-left: 5px;
   padding-right: 5px;
@@ -72,8 +72,10 @@ body {
 .signin-section {
   min-height: calc(100vh - 170px);
 }
+
+/* footer  */
 .footer .p-4 {
-  padding: 1.55rem !important;
+  padding: 1.7rem !important;
 }
 .basket_footer {
   position: fixed;
