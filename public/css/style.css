@@ -69,3 +69,6 @@ body {
 .signin-section {
   min-height: calc(100vh - 170px);
 }
+.footer .p-4 {
+  padding: 1.55rem !important;
+}
