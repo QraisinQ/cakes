@@ -29,7 +29,7 @@ const goToLogin = () => {
 const addItemTobasket = (e) => {
 	const button = e.target;
 	const itemTitle = button.dataset.title;
-	const itemId = button.dataset.id;
+	const { id: itemId, price, image, product } = button.dataset;
 
 	let basket = [];
 
@@ -40,12 +40,12 @@ const addItemTobasket = (e) => {
 		if (item) {
 			item.count += 1;
 		} else {
-			basket.push({ id: itemId, count: 1 });
+			basket.push({ id: itemId, count: 1, price, image, product });
 		}
 
 		sessionStorage.setItem('basket', JSON.stringify(basket));
 	} catch (err) {
-		sessionStorage.setItem('basket', JSON.stringify([{ id: itemId, count: 1 }]));
+		sessionStorage.setItem('basket', JSON.stringify([{ id: itemId, count: 1, price, image, product }]));
 	} finally {
 		alert(`${itemTitle} - added to basket!`);
 	}
