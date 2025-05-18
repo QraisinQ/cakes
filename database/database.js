@@ -15,6 +15,10 @@ class MyDatabase {
 	getAllCakes() {
 		return this.connection.promise().query('SELECT * FROM cakes;');
 	}
+
+	getUserByEmail(email) {
+		return this.connection.promise().query(`SELECT * FROM users WHERE email='${email}';`);
+	}
 }
 
 const myDatabase = new MyDatabase();

@@ -4,7 +4,7 @@
 	"description": "Web Development Application Project",
 	"main": "index.js",
 	"scripts": {
-		"run": "node app.js",
+		"go": "node app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
