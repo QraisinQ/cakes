@@ -3,6 +3,7 @@ const logoutLink = document.getElementById('logoutLink');
 const basketList = document.getElementById('basketList');
 const totalPrice = document.getElementById('totalPrice');
 const basketReciept = document.getElementById('basketReciept');
+const buyButton = document.getElementById('buyButton');
 
 if (!isLogged) {
 	window.location.replace('/login.html');
@@ -19,6 +20,15 @@ logoutLink.onclick = logout;
 let basket = JSON.parse(sessionStorage.getItem('basket'));
 
 if (!Array.isArray(basket)) basket = [];
+
+const buyCakes = () => {
+	alert(`Total sum: ${basket.reduce((acc, { count, price }) => acc + count * price, 0)}€`);
+	basket = [];
+	sessionStorage.setItem('basket', JSON.stringify([]));
+	renderBasket(basket);
+};
+
+buyButton.onclick = buyCakes;
 
 const getItem = ({ image, product, price, id, count }) => `
 <div class="basket-card row mx-2 mb-3 rounded-2">
@@ -72,6 +82,8 @@ const renderBasket = (items) => {
 	for (const control of controls) {
 		control.onclick = incrementItem;
 	}
+
+	buyButton.disabled = !Boolean(basket.length);
 };
 
 renderBasket(basket);
