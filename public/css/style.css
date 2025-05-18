@@ -71,9 +71,12 @@ body {
 	align-items: center;
 }
 
-.basket-delete {
-	height: 30px;
-	margin: auto;
+.basket-count {
+	font-weight: 700;
+}
+
+.basket-control {
+	cursor: pointer;
 }
 
 /* cards */

@@ -27,7 +27,7 @@
 								<li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
 								<li class="nav-item"><a class="nav-link" href="/#products">Products</a></li>
 								<li class="nav-item"><a class="nav-link" href="/#contacts">Contacts</a></li>
-								<li class="nav-item"><a class="nav-link" href="login.html">Log in</a></li>
+								<li class="nav-item" id="logoutLink"><button class="nav-link">Log out</button></li>
 								<li class="nav-item">
 									<a class="nav-link" href="#">
 										<img class="nav-basket-image" src="images/basket1.jpeg" alt="basket" />
@@ -47,43 +47,14 @@
 						<div class="basket-wrapper my-5 py-4 row rounded-2">
 							<div class="basket-content col-12 col-md-8">
 								<h3 class="basket-title d-flex justify-content-center">Basket:</h3>
-								<div class="basket-list">
-									<div class="basket-card row mx-2 mb-3 rounded-2">
-										<div class="basket-image col-4">
-											<img src="images/cakes/Banana_Cake.jpeg" alt="cake photo" />
-										</div>
-										<div class="basket-box d-flex flex-column justify-content-around p-2 col-5">
-											<div class="basket-text">Banana Cake:</div>
-											<div class="basket-price">15€</div>
-										</div>
-										<img class="basket-delete col-3" src="images/delete-svgrepo-com.svg" alt="" class="delete" />
-									</div>
-									<div class="basket-card row mx-2 mb-3 rounded-2">
-										<div class="basket-image col-4">
-											<img src="images/cakes/Banana_Cake.jpeg" alt="cake photo" />
-										</div>
-										<div class="basket-box d-flex flex-column justify-content-around p-2 col-5">
-											<div class="basket-text">Banana Cake:</div>
-											<div class="basket-price">15€</div>
-										</div>
-										<img class="basket-delete col-3" src="images/delete-svgrepo-com.svg" alt="" class="delete" />
-									</div>
-									<div class="basket-card row mx-2 mb-3 rounded-2">
-										<div class="basket-image col-4">
-											<img src="images/cakes/Banana_Cake.jpeg" alt="cake photo" />
-										</div>
-										<div class="basket-box d-flex flex-column justify-content-around p-2 col-5">
-											<div class="basket-text">Banana Cake:</div>
-											<div class="basket-price">15€</div>
-										</div>
-										<img class="basket-delete col-3" src="images/delete-svgrepo-com.svg" alt="" class="delete" />
-									</div>
-								</div>
+								<div id="basketList" class="basket-list"></div>
 							</div>
 							<div class="basket-total col-12 col-md-4">
 								<h3 class="basket-title d-flex justify-content-center">You pay:</h3>
 								<hr class="mb-5" />
-								<div class="total-price d-flex mb-4 justify-content-center">Total: 75€</div>
+								<div class="total-price d-flex mb-4 justify-content-center">
+									Total: <span class="ms-2" id="totalPrice">0</span>€
+								</div>
 								<a href="#" class="btn bg-danger-subtle border-danger-subtle mb-2 rounded-2 w-100">Buy!</a>
 							</div>
 						</div>
@@ -98,5 +69,7 @@
 				<p class="mt-2 copywrite">© Oleksandr Shyrin 2025</p>
 			</div>
 		</section>
+
+		<script src="/js/basket.js"></script>
 	</body>
 </html>

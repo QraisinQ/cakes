@@ -36,6 +36,19 @@ app.get('/shop', function (req, res) {
 	// console.log(myDatabase.getAllCakes());
 });
 
+app.post('/items', (req, res) => {
+	const idList = req.body;
+
+	myDatabase
+		.getCakesByIdList(idList)
+		.then(([rows, fields]) => {
+			res.status(200).send(JSON.stringify(rows));
+		})
+		.catch((err) => {
+			res.status(500).send(JSON.stringify(err));
+		});
+});
+
 app.post('/login', (req, res) => {
 	const { email, password } = req.body;
 
@@ -57,7 +70,7 @@ app.post('/login', (req, res) => {
 });
 
 //Server static files from the public ddirectoryю These files are accessible directly via the URL.
-app.use(express.static('public'));
+app.use(express.static('public', { extensions: ['html'] }));
 
 //Start the server on port 3000. Logs a message when the server is up and running
 app.listen(PORT, () => {

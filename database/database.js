@@ -16,6 +16,10 @@ class MyDatabase {
 		return this.connection.promise().query('SELECT * FROM cakes;');
 	}
 
+	getCakesByIdList(idList) {
+		return this.connection.promise().query(`SELECT * FROM cakes WHERE product_id IN (${idList.join(',')});`);
+	}
+
 	getUserByEmail(email) {
 		return this.connection.promise().query(`SELECT * FROM users WHERE email='${email}';`);
 	}

@@ -1,0 +1,91 @@
+const isLogged = JSON.parse(sessionStorage.getItem('auth')) || false;
+const logoutLink = document.getElementById('logoutLink');
+const basketList = document.getElementById('basketList');
+const totalPrice = document.getElementById('totalPrice');
+
+if (!isLogged) {
+	window.location.replace('/login.html');
+}
+
+const logout = () => {
+	sessionStorage.setItem('auth', JSON.stringify(false));
+	sessionStorage.setItem('basket', JSON.stringify([]));
+	window.location.replace('/');
+};
+
+logoutLink.onclick = logout;
+
+let basket = JSON.parse(sessionStorage.getItem('basket'));
+let items = [];
+
+if (!Array.isArray(basket)) basket = [];
+
+const getItem = ({ image, product, price, product_id, count }) => `
+<div class="basket-card row mx-2 mb-3 rounded-2">
+    <div class="basket-image col-4">
+        <img src="images/cakes/${image}" alt="cake photo" />
+    </div>
+    <div class="basket-box d-flex flex-column justify-content-around p-2 col-5">
+        <div class="basket-text">${product}:</div>
+        <div class="basket-price">${price}€</div>
+    </div>
+    <div
+        class="basket-count col-3 d-flex justify-content-center align-items-center basket-count"
+        data-id="${product_id}"
+    >
+        <span class="px-1 basket-control" data-increment="-1">-</span><span class="mx-1">${count}</span
+        ><span class="px-1 basket-control" data-increment="1">+</span>
+    </div>
+</div>
+`;
+
+const incrementItem = (e) => {
+	const button = e.target;
+	const id = button.parentElement.dataset.id;
+	const increment = +button.dataset.increment;
+
+	const item = items.find(({ product_id }) => product_id == id);
+
+	item.count += increment;
+
+	renderBasket(items);
+};
+
+const renderBasket = (items) => {
+	basketList.innerHTML = items.map(getItem).join('');
+	totalPrice.innerText = items.reduce((acc, { count, price }) => acc + count * price, 0);
+
+	const controls = document.getElementsByClassName('basket-control');
+	for (const control of controls) {
+		control.onclick = incrementItem;
+	}
+};
+
+const getItems = (basket) => {
+	const idList = basket.map(({ id }) => +id);
+
+	fetch('/items', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(idList),
+	})
+		.then(async (response) => {
+			if (response.ok) {
+				items = await response.json();
+
+				for (const item of items) {
+					const basketItem = basket.find(({ id }) => id == item.product_id);
+					item.count = basketItem.count;
+				}
+
+				renderBasket(items);
+			}
+		})
+		.catch(console.log);
+};
+
+if (basket.length) {
+	getItems(basket);
+}
