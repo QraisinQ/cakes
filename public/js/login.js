@@ -1,4 +1,5 @@
 const loginForm = document.getElementById('loginForm');
+const loginError = document.getElementById('loginError');
 
 loginForm.onsubmit = (e) => {
 	e.preventDefault();
@@ -14,6 +15,14 @@ loginForm.onsubmit = (e) => {
 		},
 		body: JSON.stringify({ email, password }),
 	})
-		.then(response)
+		.then((response) => {
+			if (response.ok) {
+				sessionStorage.setItem('auth', JSON.stringify(true));
+				window.location.replace('/');
+			} else {
+				sessionStorage.setItem('auth', JSON.stringify(false));
+				loginError.classList.remove('d-none');
+			}
+		})
 		.catch(console.log);
 };

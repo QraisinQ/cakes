@@ -40,7 +40,6 @@ app.post('/login', (req, res) => {
 	const { email, password } = req.body;
 
 	myDatabase.getUserByEmail(email).then(([rows, fields]) => {
-		console.log(rows);
 		if (!rows.length) {
 			res.status(401).send('');
 			return;

@@ -28,11 +28,6 @@
 								<li class="nav-item"><a class="nav-link" href="/#products">Products</a></li>
 								<li class="nav-item"><a class="nav-link" href="/#contacts">Contacts</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">Log in</a></li>
-								<li class="nav-item">
-									<a class="nav-link" href="basket.html">
-										<img class="nav-basket-image" src="images/basket1.jpeg" alt="basket" />
-									</a>
-								</li>
 							</ul>
 						</div>
 					</div>
@@ -68,16 +63,10 @@
 										id="password"
 										placeholder="Enter your password"
 										required
-										value="pass"
 									/>
 									<label for="password">Password</label>
 								</div>
-
-								<div class="form-check mb-3">
-									<input type="checkbox" class="form-check-input" id="rememberMe" value="remember-me" />
-									<label class="form-check-label" for="rememberMe">Remember me</label>
-								</div>
-
+								<div id="loginError" class="mb-3 text-danger d-none"><b>Wrong email or password!!!</b></div>
 								<button
 									class="w-100 btn btn-lg bg-danger-subtle border-danger-subtle rounded-2 custom-hover"
 									type="submit"

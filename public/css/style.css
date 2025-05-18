@@ -80,12 +80,21 @@ body {
 .card {
 	padding-left: 5px;
 	padding-right: 5px;
-	transition: transform 0.3s ease;
 }
+
+.card {
+	transition: transform 0.6s ease;
+}
+
 .card:hover {
 	transform: scale(1.02);
-	z-index: 1;
 }
+
+.card-price {
+	font-size: 32px;
+	font-weight: 700;
+}
+
 .h1 {
 	margin-bottom: 55px;
 }

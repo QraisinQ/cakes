@@ -27,8 +27,9 @@
 								<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 								<li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
 								<li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
-								<li class="nav-item"><a class="nav-link" href="login.html">Log in</a></li>
-								<li class="nav-item">
+								<li class="nav-item" id="loginLink"><a class="nav-link" href="login.html">Log in</a></li>
+								<li class="nav-item d-none" id="logoutLink"><button class="nav-link">Log out</button></li>
+								<li class="nav-item d-none" id="cartLink">
 									<a class="nav-link" href="basket.html">
 										<img class="nav-basket-image" src="images/basket1.jpeg" alt="basket" />
 									</a>
@@ -121,7 +122,14 @@
 								<div class="card-body">
 									<h4 class="card-title"><%= cake.product %></h4>
 									<p class="card-text"><%= cake.short_description %></p>
-									<a href="#" class="btn bg-danger-subtle border-danger-subtle rounded-2 get-it-button">Get it!</a>
+									<div class="mb-4 card-price"><%= cake.price %>€</div>
+									<button
+										class="btn bg-danger-subtle border-danger-subtle rounded-2 get-it-button"
+										data-id="<%= cake.product_id %>"
+										data-title="<%= cake.product %>"
+									>
+										Get it!
+									</button>
 								</div>
 							</div>
 						</div>
@@ -189,5 +197,6 @@
 				<p class="mt-2 copywrite">© Oleksandr Shyrin 2025</p>
 			</div>
 		</section>
+		<script src="/js/home.js"></script>
 	</body>
 </html>
