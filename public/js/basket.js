@@ -2,6 +2,7 @@ const isLogged = JSON.parse(sessionStorage.getItem('auth')) || false;
 const logoutLink = document.getElementById('logoutLink');
 const basketList = document.getElementById('basketList');
 const totalPrice = document.getElementById('totalPrice');
+const basketReciept = document.getElementById('basketReciept');
 
 if (!isLogged) {
 	window.location.replace('/login.html');
@@ -58,6 +59,14 @@ const incrementItem = (e) => {
 const renderBasket = (items) => {
 	basketList.innerHTML = items.map(getItem).join('');
 	totalPrice.innerText = items.reduce((acc, { count, price }) => acc + count * price, 0);
+	basketReciept.innerHTML = items
+		.map(
+			({ product, count, price }) =>
+				`<div class="mb-3 d-flex justify-content-between align-items-center basket-reciept-item"><span>${product} x${count}</span> <span>${
+					price * count
+				}€</span></div>`
+		)
+		.join('');
 
 	const controls = document.getElementsByClassName('basket-control');
 	for (const control of controls) {

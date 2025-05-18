@@ -71,7 +71,8 @@ body {
 	align-items: center;
 }
 
-.basket-count {
+.basket-count,
+.basket-reciept-item {
 	font-weight: 700;
 }
 
