@@ -16,11 +16,10 @@ const logout = () => {
 logoutLink.onclick = logout;
 
 let basket = JSON.parse(sessionStorage.getItem('basket'));
-let items = [];
 
 if (!Array.isArray(basket)) basket = [];
 
-const getItem = ({ image, product, price, product_id, count }) => `
+const getItem = ({ image, product, price, id, count }) => `
 <div class="basket-card row mx-2 mb-3 rounded-2">
     <div class="basket-image col-4">
         <img src="images/cakes/${image}" alt="cake photo" />
@@ -31,7 +30,7 @@ const getItem = ({ image, product, price, product_id, count }) => `
     </div>
     <div
         class="basket-count col-3 d-flex justify-content-center align-items-center basket-count"
-        data-id="${product_id}"
+        data-id="${id}"
     >
         <span class="px-1 basket-control" data-increment="-1">-</span><span class="mx-1">${count}</span
         ><span class="px-1 basket-control" data-increment="1">+</span>
@@ -41,14 +40,19 @@ const getItem = ({ image, product, price, product_id, count }) => `
 
 const incrementItem = (e) => {
 	const button = e.target;
-	const id = button.parentElement.dataset.id;
+	const itemId = button.parentElement.dataset.id;
 	const increment = +button.dataset.increment;
 
-	const item = items.find(({ product_id }) => product_id == id);
+	const item = basket.find(({ id }) => itemId == id);
 
 	item.count += increment;
 
-	renderBasket(items);
+	if (!item.count) {
+		basket = basket.filter(({ id }) => id != itemId);
+	}
+
+	sessionStorage.setItem('basket', JSON.stringify(basket));
+	renderBasket(basket);
 };
 
 const renderBasket = (items) => {
@@ -61,31 +65,4 @@ const renderBasket = (items) => {
 	}
 };
 
-const getItems = (basket) => {
-	const idList = basket.map(({ id }) => +id);
-
-	fetch('/items', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(idList),
-	})
-		.then(async (response) => {
-			if (response.ok) {
-				items = await response.json();
-
-				for (const item of items) {
-					const basketItem = basket.find(({ id }) => id == item.product_id);
-					item.count = basketItem.count;
-				}
-
-				renderBasket(items);
-			}
-		})
-		.catch(console.log);
-};
-
-if (basket.length) {
-	getItems(basket);
-}
+renderBasket(basket);
