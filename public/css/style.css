@@ -1,5 +1,9 @@
 body {
   background-color: rgb(239, 230, 230);
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 .h1 {
   color: #808284;
@@ -30,10 +34,48 @@ body {
 .linkedIn {
   max-width: 48px;
 }
-.basket {
-  max-width: 30px;
-  /* background-color: #fff; */
+
+/* basket */
+
+.basket-wrapper {
+  min-height: 100px;
+  max-width: 60vw;
+  min-width: 350px;
+  background-color: white;
+  margin: auto;
+  margin-top: 75px;
 }
+.basket-card {
+  background-color: rgb(239, 230, 230);
+}
+
+.basket-image {
+  max-width: 30px;
+}
+.basket-text {
+  display: flex;
+  align-items: center;
+}
+.basket-price {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.total-price {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.basket-delete {
+  height: 30px;
+  margin: auto;
+}
+.buy-button {
+  max-width: 15vw;
+  margin: auto;
+}
+
 /* cards */
 .card {
   padding-left: 5px;
@@ -76,13 +118,9 @@ body {
 /* footer  */
 .footer .p-4 {
   padding: 1.7rem !important;
+  min-height: 50px;
 }
-.basket_footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
+
 .copywrite {
   color: #808284;
 }
