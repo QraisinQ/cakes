@@ -1,139 +1,153 @@
+/* adds bg color for all page and  */
 body {
-	background-color: rgb(239, 230, 230);
-	min-height: 100vh;
-	margin: 0;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+  background-color: rgb(239, 230, 230);
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
+/* Sets color and margin bottom for class .h1 */
 .h1 {
-	color: #808284;
+  color: #808284;
+  margin-bottom: 55px;
 }
 
+/* Carousel */
+
+/* Adjusts carousel appearance */
 .carousel-item {
-	min-height: 652px;
-	height: 90vh;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-color: rgb(239, 230, 230);
+  min-height: 652px;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(239, 230, 230);
 }
 
 .slide-1 {
-	background-image: url('../images/cakes/resized/slide-1.jpeg');
+  background-image: url("../images/cakes/resized/slide-1.jpeg");
 }
 .slide-2 {
-	background-image: url('../images/cakes/resized/slide-2.jpg');
+  background-image: url("../images/cakes/resized/slide-2.jpg");
 }
 .slide-3 {
-	background-image: url('../images/cakes/resized/slide-3.jpeg');
+  background-image: url("../images/cakes/resized/slide-3.jpeg");
 }
-
+/* Sets max width for telegram logo */
 .telegram {
-	max-width: 50px;
+  max-width: 50px;
 }
+/* Sets max width for linkedin logo */
 .linkedIn {
-	max-width: 48px;
+  max-width: 48px;
 }
-
+/* Sets max width for basket image in navbar */
 .nav-basket-image {
-	max-width: 30px;
+  max-width: 30px;
 }
 
 /* basket */
 
+/* Sets bgc for basket and adjusts it in the middle */
 .basket-wrapper {
-	background-color: white;
-	margin: auto;
+  background-color: white;
+  margin: auto;
 }
 
+/* Sets bgc for basket card */
 .basket-card {
-	background-color: rgb(239, 230, 230);
+  background-color: rgb(239, 230, 230);
 }
 
 .basket-image img {
-	width: 100%;
+  width: 100%;
 }
 
+/* Aligns text in the center */
 .basket-text {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
-
+/* Sets Bold font and aligns it in the center */
 .basket-price {
-	font-weight: 700;
-	display: flex;
-	align-items: center;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
+/* Sets Bold fort and aligns it in the center  */
 .total-price {
-	font-weight: 700;
-	display: flex;
-	align-items: center;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
+/* Sets Bold font */
 .basket-count,
 .basket-reciept-item {
-	font-weight: 700;
+  font-weight: 700;
 }
 
+/* Sets pointer appearance */
 .basket-control {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 /* cards */
 .card {
-	padding-left: 5px;
-	padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
+/* Sets small approximation */
 .card {
-	transition: transform 0.6s ease;
+  transition: transform 0.6s ease;
 }
 
 .card:hover {
-	transform: scale(1.02);
+  transform: scale(1.02);
 }
-
+/* Sets font-size and bold font */
 .card-price {
-	font-size: 32px;
-	font-weight: 700;
+  font-size: 32px;
+  font-weight: 700;
 }
 
-.h1 {
-	margin-bottom: 55px;
-}
-
+/* Sets image occupation 100% of the width */
 .about-image img {
-	width: 100%;
+  width: 100%;
 }
 
+/*Sets borders for the about image  */
 .about-image {
-	border: 5px solid white;
-	border-radius: 5px;
+  border: 5px solid white;
+  border-radius: 5px;
 }
 
 /* contacts */
+
+/* Sets contacts bgc and rounds corners */
 .contacts-wrapper {
-	background-color: #ffffff;
-	border-radius: 5px;
-}
-.custom-hover:hover {
-	background-color: #e89ca2 !important; /* Slightly darker than bg-danger-subtle */
-	border-color: #e6848c !important; /* Slightly deeper border */
-	color: #000 !important;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
 /* signin */
-.signin-section {
-	min-height: calc(100vh - 170px);
+
+/* Sets sign in button color*/
+.custom-hover:hover {
+  background-color: #e89ca2 !important; /* Slightly darker than bg-danger-subtle */
+  border-color: #e6848c !important; /* Slightly deeper border */
+  color: #000 !important;
 }
 
 /* footer  */
+/* Sets min height and padding */
 .footer .p-4 {
-	padding: 1.7rem !important;
-	min-height: 50px;
+  padding: 1.7rem !important;
+  min-height: 50px;
 }
-
+/* Sets color */
 .copywrite {
-	color: #808284;
+  color: #808284;
 }
