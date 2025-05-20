@@ -70,7 +70,7 @@ app.post("/login", (req, res) => {
       res.status(401).send("");
       return;
     }
-    // f email exists and password matches, respond with: 200 OK
+    // If email exists and password matches, respond with: 200 OK
     res.status(200).send("Ok");
   });
 });

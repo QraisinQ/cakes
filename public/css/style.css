@@ -25,14 +25,18 @@ body {
 }
 
 .slide-1 {
-  background-image: url("../images/cakes/resized/slide-1.jpeg");
+  background: url("../images/cakes/resized/slide-1.jpeg") center/cover no-repeat;
+  height: 400px;
 }
 .slide-2 {
-  background-image: url("../images/cakes/resized/slide-2.jpg");
+  background: url("../images/cakes/resized/slide-2.jpg") center/cover no-repeat;
+  height: 400px;
 }
 .slide-3 {
-  background-image: url("../images/cakes/resized/slide-3.jpeg");
+  background: url("../images/cakes/resized/slide-3.jpeg") center/cover no-repeat;
+  height: 400px;
 }
+
 /* Sets max width for telegram logo */
 .telegram {
   max-width: 50px;

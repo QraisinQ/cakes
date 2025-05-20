@@ -30,6 +30,26 @@ const goToLogin = () => {
   window.location.replace("/login.html");
 };
 
+// Displays  different image in the carousel each time the page is loaded
+
+// Runs the function after HTML page loaded
+window.addEventListener("DOMContentLoaded", () => {
+  // Selects all images with .carousel-item class
+  const items = document.querySelectorAll(".carousel-item");
+  // Selects all dots with .carousel-indicators class
+  const indicators = document.querySelectorAll(".carousel-indicators button");
+  // Generates random integer inside 0 to item.length-1 range
+  const randomIndex = Math.floor(Math.random() * items.length);
+  // REmoves an active class from set of items (images)
+  items.forEach((item) => item.classList.remove("active"));
+  // Removes an active class from set of indicators(dots)
+  indicators.forEach((indicator) => indicator.classList.remove("active"));
+  // Sets an active class to randomly chosen item(image)
+  items[randomIndex].classList.add("active");
+  // Sets an active class to randomly chosen indicator(dot)
+  indicators[randomIndex].classList.add("active");
+});
+
 //adds item to the basket
 const addItemTobasket = (e) => {
   const button = e.target;
