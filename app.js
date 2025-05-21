@@ -30,27 +30,6 @@ app.get("/", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-//Defines a route for /shop
-app.get("/shop", function (req, res) {});
-
-// Node.js/Express route handler
-
-app.post("/items", (req, res) => {
-  const idList = req.body;
-
-  myDatabase
-    .getCakesByIdList(idList)
-    //   If success, destructures data to get the cake data
-    .then(([rows, fields]) => {
-      // Sends 200
-      res.status(200).send(JSON.stringify(rows));
-    })
-    //   If error, sends 500
-    .catch((err) => {
-      res.status(500).send(JSON.stringify(err));
-    });
-});
-
 // Receives email and password from the request body
 app.post("/login", (req, res) => {
   const { email, password } = req.body;

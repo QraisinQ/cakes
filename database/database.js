@@ -17,12 +17,7 @@ class MyDatabase {
   getAllCakes() {
     return this.connection.promise().query("SELECT * FROM cakes;");
   }
-  // REtrieves all records in range
-  getCakesByIdList(idList) {
-    return this.connection
-      .promise()
-      .query(`SELECT * FROM cakes WHERE product_id IN (${idList.join(",")});`);
-  }
+
   // Retrieves a user from database whose email matches the input
   getUserByEmail(email) {
     return this.connection
