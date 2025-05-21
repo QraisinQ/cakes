@@ -41,36 +41,8 @@ CREATE TABLE `cakes` (
 
 LOCK TABLES `cakes` WRITE;
 /*!40000 ALTER TABLE `cakes` DISABLE KEYS */;
-INSERT INTO `cakes` VALUES (1,'Banana Cake','O\'Hehirs','Moist and fluffy banana cake, rich in natural sweetness, perfect for breakfast or dessert.',15,'Banana_Cake.jpeg'),(2,'Tiramisu','O\'Hehirs','Classic Italian dessert layered with mascarpone, espresso-soaked ladyfingers, and a dusting of cocoa.',19,'Tiramisu.jpeg'),(3,'Napoleon','O\'Hehirs','Crispy puff pastry layered with rich vanilla custard, a timeless French pastry indulgence.',22,'Napoleon.jpeg'),(4,'Elegant Red Velver Cake','O\'Hehirs','Lusciously smooth red velvet layers with cream cheese frosting, ideal for celebrations.',18,'Elegant_Red_Velvet_Cake.jpeg'),(5,'Classic Vanila Cake','O\'Hehirs','Soft and buttery vanilla cake with light frosting—perfectly simple and always satisfying.',15,'Classic_Vanila_Cake.jpeg'),(6,'Delicious Cake For Every Occasion','O\'Hehirs','A versatile, flavorful cake crafted to suit birthdays, weddings, or everyday joy.',16,'Delicious_Cake_For_Every_Occasion.jpeg');
+INSERT INTO `cakes` VALUES (1,'Banana Cake','O\'Hehirs','Moist and fluffy banana cake, rich in natural sweetness, perfect for breakfast or dessert.',15,'Banana_Cake.jpeg'),(2,'Tiramisu','O\'Hehirs','Classic Italian dessert layered with mascarpone, espresso-soaked ladyfingers, and a dusting of cocoa.',19,'Tiramisu.jpeg'),(3,'Napoleon','O\'Hehirs','Crispy puff pastry layered with rich vanilla custard, a timeless French pastry indulgence.',22,'Napoleon.jpeg'),(4,'Elegant Red Velver Cake','O\'Hehirs','Lusciously smooth red velvet layers with cream cheese frosting, ideal for celebrations.',18,'Elegant_Red_Velvet_Cake.jpeg'),(5,'Classic Vanila Cake','O\'Hehirs','Soft and buttery vanilla cake with light frosting—perfectly simple and always satisfying.',15,'Classic_Vanila_Cake.jpeg'),(6,'Delicious Cake For Every Occasion','O\'Hehirs','A versatile, flavorful cake crafted to suit birthdays, weddings, or everyday joy.',16,'Delicious_Cake_For_Every_Occasion.jpeg'),(7,'Carrot Cake','O\'Hehirs','Deliciously moist Carrot Cake topped with creamy frosting',17,'Carrot_Cake.jpeg'),(8,'Cheesecake','O\'Hehirs','Creamy and delicious cheesecake for every occasion.',22,'Cheesecake.jpeg'),(9,'Fruit Cake','O\'Hehirs','A delicious blend of dried fruits and nuts in a moist sponge cake.',18,'Fruit_Cake.jpeg'),(10,'Butter Cake','O\'Hehirs','A rich and moist classic cake, perfect for any celebration.',20,'Butter_Cake.jpeg'),(11,'Coffee Cake','O\'Hehirs','A moist and flavorful cake infused with rich coffee goodness.',20,'Coffee_Cake.jpeg'),(12,'Lemon Cake','O\'Hehirs','A perfect blend of zesty lemon flavor and moist cake that will tantalize your taste buds',16,'Lemon_Cake.jpeg');
 /*!40000 ALTER TABLE `cakes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `orders`
---
-
-DROP TABLE IF EXISTS `orders`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `orders` (
-  `order_id` int NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
-  `product_id` int NOT NULL,
-  PRIMARY KEY (`order_id`),
-  KEY `user_id` (`user_id`),
-  KEY `product_id` (`product_id`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `cakes` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `orders`
---
-
-LOCK TABLES `orders` WRITE;
-/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -107,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-04 14:13:35
+-- Dump completed on 2025-05-21 14:59:46
