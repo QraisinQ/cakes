@@ -25,18 +25,14 @@ body {
 }
 
 .slide-1 {
-  background: url("../images/cakes/resized/slide-1.jpeg") center/cover no-repeat;
-  height: 400px;
+  background-image: url("../images/cakes/resized/slide-1.jpeg");
 }
 .slide-2 {
-  background: url("../images/cakes/resized/slide-2.jpg") center/cover no-repeat;
-  height: 400px;
+  background-image: url("../images/cakes/resized/slide-2.jpg");
 }
 .slide-3 {
-  background: url("../images/cakes/resized/slide-3.jpeg") center/cover no-repeat;
-  height: 400px;
+  background-image: url("../images/cakes/resized/slide-3.jpeg");
 }
-
 /* Sets max width for telegram logo */
 .telegram {
   max-width: 50px;
@@ -146,7 +142,7 @@ body {
 }
 
 /* footer  */
-/* Sets min height and padding */
+/* Sets min height and */
 .footer .p-4 {
   padding: 1.7rem !important;
   min-height: 50px;
